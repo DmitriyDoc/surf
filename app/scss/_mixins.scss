@@ -1,0 +1,138 @@
+@mixin big-title {
+    font-weight: 800;
+    font-size: 200px;
+    line-height: 156px;
+    z-index: 9;
+}
+
+@mixin title {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 86px;
+}
+
+@mixin subtitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+}
+
+@mixin title-h3 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 86px;
+}
+
+@mixin box-title {
+
+    span {
+        @include big-title;
+        display: inline-block;
+        color:rgba($white, 0.02);
+        position: relative;
+        transform: translateX(-50px);
+        
+        .main-title {
+            @include title;
+            color:rgba($white, 1);
+            position: absolute;
+            top: -25px;
+            right:-15px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80px;
+                height: 1px;
+                background-color: $green;
+            }
+        }
+    }
+    
+}
+
+@mixin box-subtitle {
+    margin-right: 80px;
+    text-align: right;
+    
+    .subtitle {
+        @include subtitle; 
+    }
+
+    .info-title {
+        @include title-h3;
+        padding-right: 7px;
+       
+
+        span {
+            font-weight: 100;
+        }
+    }
+}
+
+@mixin box-button {
+
+    &__link {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 36px;
+
+        span {
+            position: relative;
+            display: inline-block;
+            background-color: $green;
+            margin-left: 20px;
+            padding: 17px 57px 17px 17px;
+
+            &::before {
+                content: "—";
+                position: absolute;
+                left: -15px;
+                width: 20px;
+                height: 1px;
+                font-weight: 100;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 17px;
+                width: 24px;
+                height: 20px;
+                background-image: url('../img/right-arrow.svg');
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+@mixin box-radio { 
+        position: absolute;
+        top: 200px;
+        left: 170px;  
+
+        .picture-circle {
+            margin-right: 10px;
+        }
+    
+        .picture-info {
+            position: relative;
+            padding-left: 86px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 66px;
+                height: 1px;
+                background-color: $white;
+                opacity: 0.5;
+            }
+        }
+}

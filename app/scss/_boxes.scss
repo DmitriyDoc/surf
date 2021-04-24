@@ -1,0 +1,52 @@
+.slider-arrow {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    cursor: pointer;
+    opacity: 0.25;
+    z-index: 9;
+  
+    &__left {
+      right: 125px;
+  
+    }
+  }
+
+.subtitle-line {
+  position: relative;
+  display: inline-block;
+  padding-left: 103px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    height: 1px;
+    width: 80px;
+    background: $white;
+    opacity: 0.5;
+
+  }
+}
+
+
+.menu-btn {
+  display: none;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    z-index: 9;
+    opacity: .8;
+    cursor: pointer;
+
+    &__line {
+      height: 5px;
+      margin-bottom: 5px;
+      background-color: $green;
+  }
+}
+
+
+ 

@@ -1,0 +1,49 @@
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+  *,
+  *::before,
+  *::after {
+      -webkit-box-sizing: inherit;
+         -moz-box-sizing: inherit;
+              box-sizing: inherit;
+  }
+
+body {
+  min-width: 320px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: #171919;
+  color: $white;
+  overflow-x: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $white;
+}
+
+ul,li {
+  list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.surf, .travel, .sleep, .shop {
+  padding: 160px 0 120px;
+}
+

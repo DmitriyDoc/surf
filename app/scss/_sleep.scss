@@ -1,0 +1,133 @@
+/*SLEEP*/
+
+.sleep {
+    background-image: url(../img/sleep/Hammock.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding-bottom: 0px;
+    
+    &__title {
+        @include box-title;
+    }
+
+    &__subtitle-wrap {
+        @include box-subtitle;
+        transform: translateY(100px);
+    }
+
+    &__slider {
+        .slider-arrow {
+            top: 220px;
+        }
+    }
+
+    &__slider-item {
+
+        .sleep-slider {
+
+            &__header{
+                min-height: 780px;
+                background-repeat: no-repeat;
+                background-position: top left;
+            }
+
+            &__description {
+                margin-left: 132px;
+                margin-top: -230px;
+                min-height: 320px;
+        
+                .subtitle-wrap-desc {
+                    margin-right: 0;
+                    text-align: left;
+        
+                .subtitle {
+                    @include subtitle;
+         
+                }
+                
+                .subtitle-line-sleep {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 103px;
+                  
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        height: 1px;
+                        width: 80px;
+                        background: $white;
+                        opacity: 0.5;
+                    }
+                  }
+    
+                .info-title {
+                
+                    img {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+                }
+                
+            }
+
+            &__info {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 140px 0 132px;
+            }
+
+            &__info-item {
+                position: relative;
+                
+                span {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 36px;
+                    text-align: right;
+                    letter-spacing: 5.25px;
+                    padding-right: 75px;
+                    opacity: 0.75;
+                  
+                }
+            }
+
+            &__info-subtitle {
+                @include subtitle;
+                position: absolute;
+                left: -97px;
+                top: 97px;
+                text-align: right;
+                width: 200px;
+                height: 0;
+                white-space: nowrap;
+                transform: rotate(-90deg);
+            }
+
+            &__info-title {
+                display: flex;
+                align-items: center;
+                @include title-h3;
+                width: 300px;
+                word-wrap: break-word;
+                line-height: 36px;
+                padding-left: 40px;
+            }
+        }
+        
+    }
+
+    &__btn {
+        margin-top: 226px;
+        text-align: center;
+        .btn-box {
+            @include box-button;
+        }
+    }
+
+
+}
+

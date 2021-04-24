@@ -1,0 +1,32 @@
+/*FOOTER*/
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+        .btn-box {
+           @include box-button; 
+
+           &__link {
+
+               span {
+                   padding-right: 17px;
+
+                    &::after {
+                        top: 0;
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        background-image: none;
+                }
+               }
+           }
+        }
+        
+    &__copy {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        opacity: 0.5;
+    }
+}

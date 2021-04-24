@@ -1,0 +1,231 @@
+/*SHOP*/
+
+.shop {
+
+    &__title {
+        @include box-title;
+    }
+
+    &__slider {
+        .slider-arrow {
+            top: 0;
+        }
+    }
+
+    &__slider-item { 
+
+        .shop-slider {
+
+            &__inner {
+                display: flex;
+                justify-content: space-between;
+                min-height: 590px;
+                background-repeat: no-repeat;
+                background-position: top right;
+
+            }
+
+            &__info {
+                margin-left: 132px;
+                padding-top: 155px;
+
+            }
+
+            &__subtitle-wrap {
+
+                .subtitle {
+                    @include subtitle;
+                }
+
+                .subtitle-line-shop {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 103px;
+                      
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        height: 1px;
+                        width: 80px;
+                        background: $white;
+                        opacity: 0.5;
+                    }
+                }
+            
+                .info-title {
+                    max-width: 350px;
+                    @include title-h3;
+                    line-height: 40px;
+                }
+            }
+
+            &__price {
+                font-weight: 800;
+                font-size: 32px;
+      
+                .rating-block {
+                    margin: 20px 0 -5px -5px;
+        
+                    img {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            &__btn {
+                margin-top: 64px;
+                .btn-box {
+                    @include box-button;
+                }
+            }
+
+            &__picture {
+                position: relative;
+
+                .picture-radio {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .picture-circle {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-table;
+                    border-radius: 50%;
+                    background-color: $white;
+                    cursor: pointer;
+
+                }
+
+                .circle-line-x, 
+                .circle-line-y {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 12px;
+                        height: 2px;
+                        background-color: $green;
+                }
+
+                .circle-line-y {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+                .picture-circle.minus .circle-line-y {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                    
+                 }
+
+                .picture-circle.minus + .picture-info {
+                    visibility: visible;
+                }
+
+                .picture-info {
+                    display: block;
+                    visibility: hidden;
+                    min-width: 345px;
+                    font-weight: 800;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+
+                .radio-top {
+                    @include box-radio;
+                }
+
+                .radio-center {
+                    @include box-radio;
+                    top: 280px;
+                    left: 0;  
+
+                    .picture-info {
+                        &::before {
+                            top: 10px;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .radio-bottom {
+                    @include box-radio;
+                    top: unset;
+                    bottom: 50px;
+                    left: 52px;  
+                
+                    .picture-info {
+                        left: -380px;
+                        padding-right: 86px;
+                        padding-left: 0;
+                        text-align: right;
+
+                        &::before {
+                            top: 10px;
+                            left: 275px;
+
+                        }
+                    }
+                }
+            }
+
+            &__content {
+              
+                display: flex;
+                align-items: flex-end; 
+               
+            }
+            
+            &__extras {
+               margin-right: 95px;
+
+               .extras-title {
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 40px;
+                    margin-bottom: 25px;
+               }
+
+                .extras-inner {
+                    display: flex;
+                    align-items: flex-end;
+                    text-align: center;
+                    
+                }
+           
+                .extras-box {
+                   &:last-child {
+                       margin-left: 87px;
+                   }
+
+                   img {
+                       display: inline-block;
+                   }
+
+                   .extras-name {
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: 8px;
+                        margin: 16px 0;
+                        opacity: 0.5;
+                   }
+
+                   .extras-price {
+                        font-weight: 800;
+                        font-size: 18px;
+                        line-height: 40px;
+                   }
+                }
+            }
+            
+        }
+
+        
+
+    }
+}
