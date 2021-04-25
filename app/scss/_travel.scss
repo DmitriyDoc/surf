@@ -11,8 +11,12 @@
     }
 
     &__subtitle-wrap {
+        position: relative;
+        top: 0;
+        right: 0;
         @include box-subtitle;
         transform: translateY(100px);
+        z-index: 9;
     }
 
     &__slider {
@@ -26,21 +30,36 @@
         .travel-slider {
 
             &__header{
+                position: relative;
                 min-height: 780px;
                 background-repeat: no-repeat;
                 background-position: top left;
+
+                &::after {
+                    content: "";
+                    display: block;    
+                    width: 1700px;
+                    height: 100%;    
+                    position: absolute;
+                    top: 0;      
+                    left: 0;   
+                    background: transparent;
+                    background: radial-gradient(ellipse at 7% 55%, rgba(23,25,25,0.2) 10%, #171919 40%);
+                }
             }
 
             &__description {
-                margin-left: 132px;
-                margin-top: -230px;
-                min-height: 320px;
-                background-repeat: no-repeat;
-                background-position: top right;
-    
+   
                 .subtitle-wrap-desc {
+                    margin-left: 132px;
+                    margin-top: -425px;
+                    min-height: 320px;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    z-index: 99999;
                     margin-right: 0;
                     text-align: left;
+                    padding-top: 115px;
         
                 .subtitle {
                     @include subtitle;
@@ -81,7 +100,7 @@
             &__info {
                 display: flex;
                 justify-content: space-between;
-                margin: 0 140px 0 132px;
+                margin: 100px 140px 0 132px;
             }
 
             &__info-item {

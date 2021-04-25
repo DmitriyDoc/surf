@@ -167,10 +167,13 @@
     .travel {
         &__slider-item {
             .travel-slider__info {
-                margin: 0 0 0 25px;
+                margin: 100px 0 0 25px;
             }
             .travel-slider__description {
-                margin-left: 30px;
+                .subtitle-wrap-desc {
+                    margin-left: 30px;
+                }
+                
             }
         }
     }
@@ -253,7 +256,7 @@
     /*TRAVEL*/
     .travel {
         &__slider-item {
-            .travel-slider__description {
+            .subtitle-wrap-desc {
                 background-size: contain;
             }
 
@@ -450,11 +453,15 @@
     .travel {
         padding-top: 0;
         padding-bottom: 80px;
+        background-image: none;
 
         &__slider-item {
             .travel-slider__description {
-                background-image: none !important;
-                min-height: 218px;
+                .subtitle-wrap-desc {
+                    background-image: none !important;
+                    min-height: 218px;
+                }
+                
             }
 
             .travel-slider__info-title {
@@ -778,7 +785,7 @@
         padding-bottom: 80px;
 
         &__subtitle-wrap {
-            margin-right: 0;
+           
             text-align: center;
             .subtitle {
                 font-size: 18px;
@@ -1084,6 +1091,10 @@
     /*TRAVEL*/
     .travel {
         padding-top: 30px;
+
+        &__subtitle-wrap {
+            margin-right: 0;
+        }
 
         &__title {
             span {
